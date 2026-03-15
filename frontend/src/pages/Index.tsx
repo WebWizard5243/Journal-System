@@ -9,7 +9,7 @@ import {
   Loader2,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5001/api";
+const API_BASE = "https://journal-system-q2wo.onrender.com/api";
 
 interface Analysis {
   emotion: string;
