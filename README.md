@@ -2,6 +2,7 @@
 
 A nature-session journaling app with LLM-powered emotion analysis and mental wellness insights.
 
+p.s : the server is hosted online but the backend server takes 60s to boot up please wait.
 ---
 
 ## Tech Stack
