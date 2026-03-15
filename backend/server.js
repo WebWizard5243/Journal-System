@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5001;
 
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:5173']
+  origin: ['http://localhost:8080', 'http://localhost:5173','https://journal-system-kappa.vercel.app']
 }));
 
 
