@@ -1,7 +1,8 @@
 # AI-Assisted Journal System
 
 A nature-session journaling app with LLM-powered emotion analysis and mental wellness insights.
-#### p.s : the server is hosted online but the backend server takes 60s to boot up please wait.
+
+> **Note:** The backend is hosted online but may take up to 60 seconds to boot on first request (free tier cold start). Please wait and retry if the initial request fails.
 ---
 
 ## Tech Stack
