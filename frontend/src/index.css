@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220 47% 11%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 220 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 220 47% 11%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220 47% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'Geist Mono', ui-monospace, monospace;
+  }
+}
+
+@layer components {
+  .journal-card {
+    @apply bg-card border border-border rounded-xl overflow-hidden;
+    box-shadow: var(--shadow-card);
+  }
+
+  .label-mono {
+    @apply text-[10px] font-mono uppercase tracking-widest text-muted-foreground;
+  }
+
+  .section-heading {
+    @apply text-sm font-mono uppercase tracking-widest text-muted-foreground;
+  }
+
+  .tag-keyword {
+    @apply px-2 py-0.5 border border-border text-muted-foreground rounded text-[10px] font-medium;
+  }
+
+  .tag-emotion {
+    @apply px-2 py-0.5 bg-secondary text-secondary-foreground rounded text-[10px] font-bold uppercase tracking-tight;
+  }
+
+  .tag-cached {
+    @apply ml-auto px-2 py-0.5 bg-amber-50 text-amber-600 rounded text-[10px] font-bold uppercase italic;
+  }
+
+  .ambience-chip {
+    @apply flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-medium transition-all;
+  }
+
+  .ambience-chip-active {
+    @apply bg-primary border-primary text-primary-foreground;
+  }
+
+  .ambience-chip-inactive {
+    @apply bg-card border-border text-muted-foreground hover:border-foreground/20;
+  }
+
+  .btn-record {
+    @apply bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-medium disabled:opacity-50 flex items-center gap-2;
+  }
+
+  .btn-analyze {
+    @apply text-[10px] font-bold uppercase tracking-widest text-accent hover:opacity-80 transition-colors;
+  }
+
+  .empty-state {
+    @apply py-12 text-center border-2 border-dashed border-border rounded-xl text-muted-foreground text-sm;
+  }
+
+  .stat-card {
+    @apply p-4 bg-card border border-border rounded-lg;
+  }
+}
